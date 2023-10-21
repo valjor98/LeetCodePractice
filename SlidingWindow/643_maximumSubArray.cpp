@@ -1,3 +1,6 @@
+// 643 Maximum Average Subarray I
+// Dynamic sliding window
+
 #include <iostream>
 #include <vector>
 #include <cmath>

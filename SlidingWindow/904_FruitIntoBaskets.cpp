@@ -1,4 +1,5 @@
 // 904. Fruit Into Baskets
+// Static Sliding Window 
 
 #include <iostream>
 #include <vector>
