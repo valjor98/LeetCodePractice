@@ -30,7 +30,6 @@ int longestSubstringWithoutRepeat(string s){
         }
     }
     return int(largestSubLen);
-
 }
 
 
