@@ -1,5 +1,5 @@
 // 0167 Two Sum II
-// Two Sum
+// Two Pointers
 
 #include <iostream>
 #include <vector>
