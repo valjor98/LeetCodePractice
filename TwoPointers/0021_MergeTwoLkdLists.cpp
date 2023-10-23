@@ -1,5 +1,5 @@
 // 0021 Merge Two Sorted Linked List
-// Two Pointers
+// Two Pointers, linked list
 
 #include <iostream>
 #include <vector>
