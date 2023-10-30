@@ -1,5 +1,7 @@
 // 102. Binary Tree Level Order Traversal
-// BFS
+// BFS, Binary tree traversal
+// O(n)
+
 #include <iostream>
 #include <vector>
 #include <cmath>
