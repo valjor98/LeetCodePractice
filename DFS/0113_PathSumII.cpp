@@ -22,12 +22,13 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-void DFS(TreeNode* root, int targetSum, vector<vector<int>>& ans, vector<int> vect){
+void DFS(TreeNode* root, int targetSum, vector<vector<int>>& ans, vector<int>& vect){
     // Base case, terminating condition
     if(root == NULL){
         return;
     }
     else{
+        // Keep track of 
         int aux = targetSum - root->val;
         vect.push_back(root->val);
 
@@ -36,6 +37,7 @@ void DFS(TreeNode* root, int targetSum, vector<vector<int>>& ans, vector<int> ve
         }
         DFS(root->left, aux, ans, vect);
         DFS(root->right, aux, ans, vect);
+        vect.pop_back();
     }
 }
 
