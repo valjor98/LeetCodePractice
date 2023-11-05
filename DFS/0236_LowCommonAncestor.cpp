@@ -1,4 +1,4 @@
-// 1372. Longest ZigZag Path in a Binary Tree
+// 236. Lowest Common Ancestor of a Binary Tree
 // DST, Recursivity
 
 #include <iostream>
@@ -22,18 +22,9 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-int maxLength=0;
-
-void solve(TreeNode* root,int dir,int currLength){
-    if(!root) return;
-    maxLength=max(maxLength,currLength);
-    solve(root->left,  0, dir ? currLength+1 : 1);
-    solve(root->right, 1, dir ? 1            : currLength+1);
-}
-
-int longestZigZag(TreeNode* root) {
-    // root, direction (0L, 1R), sum
-    solve(root,0,0);
-    solve(root,1,0);
-    return maxLength;
+TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+    if (!root || root == p || root == q) return root;
+    TreeNode* left = lowestCommonAncestor(root->left, p, q);
+    TreeNode* right = lowestCommonAncestor(root->right, p, q);
+    return !left ? right : !right ? left : root;
 }
