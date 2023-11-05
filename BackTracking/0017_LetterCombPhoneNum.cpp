@@ -1,5 +1,5 @@
 // 17. Letter Combinations of a Phone Number
-// DST, Recursivity, bakctracking
+// DST, Recursivity, backtracking
 
 #include <iostream>
 #include <vector>
